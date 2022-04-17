@@ -2,13 +2,10 @@ import { useState } from "react"
 
 const useInputValue = () =>{
     const [userInfo, setUserInfo] = useState({email:'', password:'',  confirmPassword:''});
-    const [errors, setErrors] = useState({emailErrors:'', passwordErrors:'', confirmPasswordErrors:''});
-    const [checkbox, setCheckbox] = useState(false)
+    const [errors, setErrors] = useState({emailErrors:'', passwordErrors:'', confirmPasswordErrors:'' ,checkboxError:''});
+    const [checkbox, setCheckbox] = useState(null)
 
-    if(checkbox){
-
-        console.log(true)
-    }
+   
 
  
 
@@ -69,14 +66,28 @@ const getConfirmPassword = (event) =>{
 
 }
 
-const chackehandler = () =>{
-    setCheckbox(!checkbox)
+const chackehandler = (e) =>{
+    const chackedValue = e.target.checked;
+
+    if(chackedValue){
+
+
+        setCheckbox(e.target.checked)
+        setErrors({...errors , checkboxError:''})
+
+    }
+    else{
+
+      setErrors({...errors , checkboxError:'checked our terms & condition'})
+      setCheckbox(null)
+    }
     
 }
 
 
 
 return {
+    userInfo,
     getEmail,
     getPassword,
     getConfirmPassword,
