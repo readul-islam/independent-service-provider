@@ -12,8 +12,9 @@ function App() {
   return (
     <>
    <Navbar/>
-   <Home></Home>
-  <Footer></Footer>
+  
+   <SignUp></SignUp>
+  
    
    
     </>
