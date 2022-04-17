@@ -2,9 +2,14 @@ import React from "react";
 import { AiFillGithub, AiFillGoogleCircle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import useInputValue from "../../useInputValue";
-import { useCreateUserWithEmailAndPassword, useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithFacebook,
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../Firebase/Firebase.init";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const {
@@ -16,35 +21,34 @@ const SignUp = () => {
     chackehandler,
     errors,
   } = useInputValue();
+  let navigate = useNavigate();
 
-  const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-  const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
-  const [signInWithFacebook, Fuser, Floading, Ferror] = useSignInWithFacebook(auth);
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithGithub, githubUser, githubLoading, githubError] =
+    useSignInWithGithub(auth);
+  const [signInWithFacebook, Fuser, Floading, Ferror] =
+    useSignInWithFacebook(auth);
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
-    if(loading){
-      console.log('oiiiidjdkjdjd')
-    }
+ if(user){
 
+  navigate('/home')
+ }
 
+  const createUserHandler = (e) => {
+    e.preventDefault();
 
-
-    const createUserHandler = (e) => {
-      e.preventDefault();
-    
-      createUserWithEmailAndPassword(userInfo.email, userInfo.password)
-     
-  
-    };
-  
+    createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+  };
 
   return (
     <div className="w-screen text-white pt-32">
-      <div className=" md:w-[600px] w-[90%] bg-[rgb(41,55,75)] mx-auto rounded-2xl shadow-2xl shadow-[rgb(41,55,75)]/75">
+      <div className=" md:w-[600px] w-[90%] bg-[rgb(41,55,75)] mx-auto rounded-2xl shadow-2xl shadow-[rgb(41,55,75)]/75 mb-6">
         <div className="w-full lg:px-20 p-4 ">
-          <div className="text-center text-2xl font-semibold">Sign Up</div>
-          <form onSubmit={ createUserHandler } className="w-full pt-8">
+          <div className="text-center text-2xl font-semibold uppercase">Sign Up</div>
+          <form onSubmit={createUserHandler} className="w-full pt-8">
             <div className="mb-10">
               <label>E-MAIL</label>
               <input
@@ -100,7 +104,10 @@ const SignUp = () => {
               >
                 Sign Up
               </button>
-              <Link to='/login' className="underline  underline-offset-4 decoration-[rgb(99,214,196)] px-1 pb-3">
+              <Link
+                to="/login"
+                className="underline  underline-offset-4 decoration-[rgb(99,214,196)] px-1 pb-3"
+              >
                 I'm already member
               </Link>
             </div>
@@ -110,13 +117,13 @@ const SignUp = () => {
             <hr className="w-1/2 ml-2" />
           </div>
           <div className="flex justify-between  text-white">
-            <p onClick={()=>signInWithGithub()} className="p-6">
+            <p onClick={() => signInWithGithub()} className="p-6">
               <AiFillGithub size={40} />
             </p>
-            <p onClick={()=>signInWithGoogle()} className="p-6">
+            <p onClick={() => signInWithGoogle()} className="p-6">
               <AiFillGoogleCircle size={40} />
             </p>
-            <p onClick={()=>signInWithFacebook()} className="p-6">
+            <p onClick={() => signInWithFacebook()} className="p-6">
               <FaFacebook size={40} />
             </p>
           </div>
