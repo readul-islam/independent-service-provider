@@ -12,38 +12,38 @@ import RequireAuth from "./componenets/RequireAuth/RequireAuth";
 import SignUp from "./componenets/SignUp/SignUp";
 import About from "./componenets/About/About.jsx";
 
- export const serviceContext = createContext()
+export const serviceContext = createContext()
 
 function App() {
   const [service, setService] = useState([]);
-  
+
 
   return (
     <>
-    <serviceContext.Provider value={[service, setService]}>
-      <Navbar />
-
-     
-
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
-        <Route path='/sign-up' element={<SignUp />} />
-        <Route path='/login' element={<LogIn />} />
-        <Route path='/blogs' element={<Blogs/>} />
-        <Route path='/about' element={<About/>} />
-
-        
-        <Route path='/checkout' element={ <RequireAuth>
-          <CheckOut />
-        </RequireAuth>} />
-        <Route path='*' element={<NotFound />} />
+      <serviceContext.Provider value={[service, setService]}>
+        <Navbar />
 
 
-      </Routes>
 
-      
-          <Footer/>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/login' element={<LogIn />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/about' element={<About />} />
+
+
+          <Route path='/checkout' element={<RequireAuth>
+            <CheckOut />
+          </RequireAuth>} />
+          <Route path='*' element={<NotFound />} />
+
+
+        </Routes>
+
+
+        <Footer />
       </serviceContext.Provider>
 
     </>

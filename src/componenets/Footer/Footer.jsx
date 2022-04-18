@@ -54,27 +54,27 @@ const Footer = () => {
       </div>
 
       <div className="">
-        <div className="flex justify-center w-full px-1 text-sm md:text-2xl md:py-3 py-2">
+        <div className="flex justify-center w-full px-1 text-slate-500 text-sm md:text-xl md:py-3 py-2">
           <div>
-            <p className="">Wedding Photographer</p>
+            <p className="text-slate-500">Wedding Photographer</p>
 
             <p className=" w-full text-center">Copyright &copy; {date} </p>
           </div>
         </div>
         <div className="flex justify-center lg:gap-22 md:gap-6 py-2 gap-6">
-          <span className="text-4xl text-slate-400 duration-500 hover:text-[rgb(184,19,134)]">
+          <span className="text-2xl text-slate-400 duration-500 ">
             {" "}
             <ion-icon name="logo-google"></ion-icon>{" "}
           </span>
-          <span className="text-4xl text-slate-400 duration-500 hover:text-[rgb(184,19,134)]">
+          <span className="text-2xl text-slate-400 duration-500 ">
             {" "}
             <ion-icon name="logo-facebook"></ion-icon>{" "}
           </span>
-          <span className="text-4xl text-slate-400 duration-500 hover:text-[rgb(184,19,134)]">
+          <span className="text-2xl text-slate-400 duration-500 ">
             {" "}
             <ion-icon name="logo-apple"></ion-icon>{" "}
           </span>
-          <span className="text-4xl text-slate-400 duration-500 hover:text-[rgb(184,19,134)]">
+          <span className="text-2xl text-slate-400 duration-500 ">
             {" "}
             <ion-icon name="logo-twitter"></ion-icon>{" "}
           </span>

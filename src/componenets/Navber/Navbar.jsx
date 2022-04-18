@@ -17,7 +17,7 @@ const Navbar = () => {
               <ul className='hidden md:flex items-center text-xl uppercase'>
               <Link to='/home' className='px-4 '>Home</Link>
                    <Link  to='/blogs' className='px-4'>Blogs</Link>
-                   <Link to='/about' className='px-4 '>About</Link>
+                   <Link to='/' className='px-4 '>About</Link>
                    <li className='px-4'>Contect</li>
                    <div>
                    { user ?   <Link to='/login' onClick={()=> signOut(auth)}   className='px-4 font-semibold py-2  rounded-full bg-[rgb(99,214,196)]/70 shadow-2xl uppercase'>Sign Out</Link> :  <Link to='/sign-up' className='px-4 font-semibold py-2 rounded-full bg-[rgb(99,214,196)]/90 uppercase shadow-2xl '>Sign Up</Link>}
@@ -30,10 +30,10 @@ const Navbar = () => {
                   </div>
                   <div className={!nav ? 'md:hidden  fixed top-[-100%] w-full left-0 bg-[rgb(41,55,75)] text-2xl ease-in-out duration-1000' : 'md:hidden  fixed top-20 w-full  left-0 bg-[rgb(41,55,75)] text-2xl ease-in-out duration-1000'}>
               <ul className='flex flex-col justify-center items-center '>
-                   <Link to='/home' className='py-4 '>Home</Link>
-                   <li className='py-5 '>Food</li>
-                   <li className='py-5 '>Service</li>
-                   <li className='py-5 '>About</li>
+              <Link to='/home' className='py-5 '>Home</Link>
+                   <Link to='/home' className='py-5 '>Home</Link>
+                   <Link  to='/blogs' className='py-5'>Blogs</Link>
+                   <Link to='/about' className='py-5 '>About</Link>
                    <div className='pb-8 pt-6'>
                     { user ?  <Link to='/login' onClick={()=> signOut(auth)} className='px-3  font-semibold   py-5 rounded-full bg-[rgb(99,214,196)] shadow-2xl '>Sign Out</Link> :
                      <Link to='/sign-up' className='px-3  font-semibold py-2 rounded-full bg-[rgb(99,214,196)] mb-4 shadow-2xl '>Sign up</Link>}
