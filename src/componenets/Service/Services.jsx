@@ -1,14 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { serviceContext } from '../../App';
+
 import Service from './Service';
 
 const Services = () => {
-    const [services, setService] = useState([]);
+    const [services, setServices] = useState([])
+    const [service, setService] = useContext(serviceContext) ; 
+
+    const serviceHandler = (service) =>{
+
+        setService(service)
+                     
+      
+          };
+   
 
     useEffect(()=>{
 
         fetch('Photos.json')
         .then(res =>res.json())
-        .then(data => setService(data))
+        .then(data => setServices(data))
 
 
     },[])
@@ -22,7 +33,7 @@ const Services = () => {
                   
            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-14">
            {
-            services.map(service => <Service service={service} key={service.id}></Service>)
+            services.map(service => <Service service={service} key={service.id} serviceHandler ={serviceHandler}></Service>)
             }
 
            </div>

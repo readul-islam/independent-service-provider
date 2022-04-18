@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const [user, loading, error] = useAuthState(auth);
-    console.log(user)
+    // console.log(user)
     return (
         <div className="w-screen">
            <div className='flex justify-between items-center z-10 px-4 h-20 fixed  md:px-8 lg:px-16 w-full bg-[rgb(41,55,75)]  text-white'>

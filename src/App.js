@@ -1,3 +1,4 @@
+import { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import CheckOut from "./componenets/CheckOut/CheckOut";
 import Footer from "./componenets/Footer/Footer";
@@ -9,13 +10,18 @@ import RequireAuth from "./componenets/RequireAuth/RequireAuth";
 import Services from "./componenets/Service/Services";
 import SignUp from "./componenets/SignUp/SignUp";
 
+ export const serviceContext = createContext()
 
 function App() {
+  const [service, setService] = useState({});
+  
+
   return (
     <>
+    <serviceContext.Provider value={[service, setService]}>
       <Navbar />
 
-
+     
 
       <Routes>
         <Route path='/' element={<Home />} />
@@ -25,9 +31,7 @@ function App() {
         <Route path='/service' element={<RequireAuth>
           <Services />
         </RequireAuth>} />
-        <Route path='/checkout' element={<RequireAuth>
-          <CheckOut />
-        </RequireAuth>} />
+        <Route path='/checkout' element={ <CheckOut />} />
         <Route path='*' element={<NotFound />} />
 
 
@@ -35,7 +39,7 @@ function App() {
 
       
 
-
+      </serviceContext.Provider>
 
     </>
   );
