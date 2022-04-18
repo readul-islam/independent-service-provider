@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillGithub, AiFillGoogleCircle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import useInputValue from "../../useInputValue";
+
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithFacebook,
@@ -47,7 +48,7 @@ const SignUp = () => {
     <div className="w-screen text-white pt-32">
       <div className=" md:w-[600px] w-[90%] bg-[rgb(41,55,75)] mx-auto rounded-2xl shadow-2xl shadow-[rgb(41,55,75)]/75 mb-6">
         <div className="w-full lg:px-20 p-4 ">
-          <div className="text-center text-2xl font-semibold uppercase">Sign Up</div>
+          <div className="text-center text-2xl pt-4 font-semibold uppercase">Sign Up</div>
           <form onSubmit={createUserHandler} className="w-full pt-8">
             <div className="mb-10">
               <label>E-MAIL</label>

@@ -2,10 +2,13 @@ import React from 'react';
 import Typed from 'react-typed';
 import banner from '../../assets/image/Asset 1.png'
 
+import Services from '../Service/Services';
+
 const Home = () => {
     return (
-        <div className="w-screen pt-20 text-white bg-[rgb(41,55,75)] ">
-            <div className="w-3/4 h-full  mx-auto md:pt-20 ">
+        <>
+        <div className="w-screen lg:h-screen overflow-x-hidden  pt-20 text-white bg-[rgb(41,55,75)] ">
+            <div className="w-3/4 h-full   mx-auto md:pt-20 ">
            <div className="lg:flex    justify-between items-center ">
           <div className="lg:space-y-4 md:space-y-2  w-full h-full text-center lg:text-left  ">
           <h1 className="lg:text-5xl font-bold md:text-3xl  text-2xl ">MD READUL ISLAM <p className="  text-[rgb(99,214,196)]  '">
@@ -22,7 +25,7 @@ const Home = () => {
           </div>
 
              <div className='w-full h-full'>
-                 <img className="lg:w-[1200px] md:[200px] rounded-2xl pb-14" src={banner} alt="" />
+                 <img className="lg:w-[1200px] md:[200px] rounded-2xl" src={banner} alt="" />
              </div>
 
            </div>
@@ -30,7 +33,9 @@ const Home = () => {
 
             </div>
             
+       <Services/>
         </div>
+        </>
     );
 };
 

@@ -43,7 +43,7 @@ const LogIn = () => {
     <div className="w-screen text-white pt-32">
       <div className=" md:w-[600px] w-[90%] bg-[rgb(41,55,75)] mx-auto rounded-2xl shadow-2xl shadow-[rgb(41,55,75)]/75">
         <div className="w-full lg:px-20 p-4 ">
-          <div className="text-center text-2xl font-semibold">SIGN IN</div>
+          <div className="text-center text-2xl pt-4 font-semibold">SIGN IN</div>
           <form onSubmit={userSignIn} className="w-full pt-8">
             <div className="mb-10">
               <label>E-MAIL</label>
@@ -90,18 +90,18 @@ const LogIn = () => {
               </Link>
             </div>
           </form>
-          <div className="w-full flex items-center pt-6">
+          <div className="w-full flex items-center pt-8">
             <hr className="w-1/2 mr-2" /> <span>or</span>{" "}
             <hr className="w-1/2 ml-2" />
           </div>
           <div className="flex justify-between  text-white">
-            <p onClick={() => signInWithGithub()} className="p-6">
+            <p onClick={() => signInWithGithub()} className="p-8">
               <AiFillGithub size={40} />
             </p>
-            <p onClick={() => signInWithGoogle()} className="p-6">
+            <p onClick={() => signInWithGoogle()} className="p-8">
               <AiFillGoogleCircle size={40} />
             </p>
-            <p onClick={() => signInWithFacebook()} className="p-6">
+            <p onClick={() => signInWithFacebook()} className="p-8">
               <FaFacebook size={40} />
             </p>
           </div>
