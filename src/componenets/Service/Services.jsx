@@ -39,7 +39,7 @@ const Services = () => {
     },[])
 
     return (
-        <div className="w-full h-screen   bg-[rgb(41,55,75)]">
+        <div className="w-full   bg-[rgb(41,55,75)]">
            
             <div className="w-3/4  pb-20 mx-auto">
               <h1 className="text-center lg:text-5xl md:text-3xl text-2xl 

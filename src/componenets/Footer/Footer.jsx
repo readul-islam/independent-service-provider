@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-screen bg-[rgb(41,55,75)] text-white flex-wrap pt-20">
+    <div className="w-screen  bg-[rgb(41,55,75)] pb-20 text-white flex-wrap pt-20">
       <div className="md:flex items-center justify-center pb-12">
         <div className="massage lg:px-16 px-6 md:w-2/4">
           <h1 className="text-3xl font-bold md:text-4xl pb-6 text-center">

@@ -62,12 +62,12 @@ const SignUp = () => {
   };
 
   return (
-    <div className="w-screen text-white pt-32">
-      <div className=" md:w-[600px] w-[90%] bg-[rgb(41,55,75)] mx-auto rounded-2xl shadow-2xl shadow-[rgb(41,55,75)]/75 mb-6">
-        <div className="w-full lg:px-20 p-4 ">
+    <div className="w-screen overflow-x-hidden bg-black pb-10 text-white pt-28">
+      <div className=" md:w-[550px] w-[90%] bg-[rgb(41,55,75)] mx-auto rounded-2xl shadow-2xl shadow-[rgb(41,55,75)]/75 mb-6">
+        <div className="w-full lg:px-12 p-4 ">
           <div className="text-center text-2xl pt-4 font-semibold uppercase">Sign Up</div>
-          <form onSubmit={createUserHandler} className="w-full pt-8">
-            <div className="mb-10">
+          <form onSubmit={createUserHandler} className="w-full pt-">
+            <div className="mb-6">
               <label>E-MAIL</label>
               <input
                 onChange={getEmail}
@@ -77,7 +77,7 @@ const SignUp = () => {
               <p className="text-red-500 mt-1">{errors?.emailErrors}</p>
             </div>
 
-            <div className="mb-10">
+            <div className="mb-6">
               <label>PASSWORD</label>
               <input
                 onChange={getPassword}
@@ -87,7 +87,7 @@ const SignUp = () => {
               <p className="text-red-500 pt-1 ">{errors?.passwordErrors}</p>
             </div>
 
-            <div className="mb-10">
+            <div className="mb-6">
               <label>Confirm Password</label>
               <input
                 onChange={getConfirmPassword}
@@ -116,7 +116,7 @@ const SignUp = () => {
             </span>
             <p className="text-red-500 pt-1 ">{errors?.checkboxError}</p>
 
-            <div className=" md:flex justify-center mt-10 space-y-4 md:space-x-4 md:items-center">
+            <div className=" md:flex justify-center mt-6 space-y-4 md:space-x-4 md:items-center">
               <button
               disabled={!checkbox}
                 type="submit"
