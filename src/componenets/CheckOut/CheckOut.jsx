@@ -1,17 +1,34 @@
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { serviceContext } from '../../App';
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+
+import { serviceContext } from "../../App";
+import CheckoutDetail from "./CheckoutDetail";
 
 const CheckOut = () => {
-    const navigate = useNavigate()
-    const [service] = useContext(serviceContext)
-    console.log(service)
-    return (
-        <div onClick={()=>navigate(-1)} className="pt-20">
-            <button>back</button>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi fugiat beatae dolore fugit atque, adipisci eveniet! Quaerat tempore ad incidunt doloribus itaque sapiente officia, repellat beatae eligendi laborum rerum in. Est facere ipsum dolorem incidunt, vel architecto qui illo placeat voluptate unde sint, reprehenderit assumenda aliquam doloribus rem iure dolore impedit. Tenetur, dolore ratione? Impedit hic tempora maxime? Quod consequuntur ipsa amet consequatur voluptates maiores animi, tempora aperiam odio perferendis molestias dolorum hic? Eligendi dolorem odio neque vel autem cumque necessitatibus. Dignissimos soluta vero magnam unde aut perferendis deserunt dolores quam, exercitationem nam quaerat nihil nostrum eos sit consequuntur reprehenderit!</h1>
-        </div>
-    );
+  const navigate = useNavigate();
+  const [service] = useContext(serviceContext);
+ 
+
+  
+ 
+//   console.log(service)
+
+   
+
+
+  return (
+    <div  className="pt-20 bg-[rgb(41,55,75)] w-full text-white ">
+      <button className="flex items-center px-4 md:px-8 lg:px-16 fixed"onClick={() => navigate(-1)}><FaArrowLeft/><span>back</span></button>
+      <p className="text-center py-8 md:text-2xl text-xl font-semibold">CheckOut Details</p>
+
+      <div className="w-3/5 mx-auto pb-20">
+      <div className="grid grid-cols-1  gap-4 ">
+          {service.map(data=> <CheckoutDetail key={data.id} service={data} /> )}
+      </div>
+      </div>
+    </div>
+  );
 };
 
 export default CheckOut;

@@ -12,7 +12,7 @@ const useInputValue = () => {
     confirmPasswordErrors: "",
     checkboxError: "",
   });
-  const [checkbox, setCheckbox] = useState(null);
+  const [checkbox, setCheckbox] = useState(false);
 
   const getEmail = (event) => {
     const emailValue = event.target.value;
@@ -58,16 +58,10 @@ const useInputValue = () => {
     }
   };
 
-  const chackehandler = (e) => {
-    const chackedValue = e.target.checked;
+  const chackehandler = () => {
+    
+    setCheckbox(!checkbox)
 
-    if (chackedValue) {
-      setCheckbox(e.target.checked);
-      setErrors({ ...errors, checkboxError: "" });
-    } else {
-      setErrors({ ...errors, checkboxError: "checked our terms & condition" });
-      setCheckbox(null);
-    }
   };
 
   return {

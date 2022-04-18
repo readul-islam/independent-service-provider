@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 import { serviceContext } from '../../App';
 
 import Service from './Service';
@@ -7,12 +8,25 @@ const Services = () => {
     const [services, setServices] = useState([])
     const [service, setService] = useContext(serviceContext) ; 
 
-    const serviceHandler = (service) =>{
+    const serviceHandler = (selectedService) =>{ 
+        const findService = service.find(data => data.id === selectedService.id);
+        if(!findService){
 
-        setService(service)
-                     
+            setService([...service,selectedService ])
+        }else{
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="">Why do I have this issue?</a>'
+              })
+        }
+        
+        
+    }   
       
-          };
+          
    
 
     useEffect(()=>{

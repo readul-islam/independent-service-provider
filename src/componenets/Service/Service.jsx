@@ -13,7 +13,7 @@ const Service = ({ service, serviceHandler }) => {
       <div className="  flex w-full justify-between py-4">
         <Link
           to="/checkout"
-          onClick={serviceHandler(service)}
+          onClick={()=> serviceHandler(service)}
           className="lg:px-4 px-2  font-semibold lg:py-2 py-1 rounded-full bg-[rgb(99,214,196)]/80 hover:bg-[rgb(99,214,196)] lg:shadow-2xl "
         >
           checkout

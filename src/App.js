@@ -13,7 +13,7 @@ import SignUp from "./componenets/SignUp/SignUp";
  export const serviceContext = createContext()
 
 function App() {
-  const [service, setService] = useState({});
+  const [service, setService] = useState([]);
   
 
   return (

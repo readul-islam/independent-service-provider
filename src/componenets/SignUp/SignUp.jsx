@@ -11,6 +11,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/Firebase.init";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const {
@@ -36,6 +37,22 @@ const SignUp = () => {
  if(user){
 
   navigate('/home')
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  
+  Toast.fire({
+    icon: 'success',
+    title: 'SignUp in successfully'
+  })
  }
 
   const createUserHandler = (e) => {
@@ -84,9 +101,10 @@ const SignUp = () => {
 
             <span>
               <input
+           
                 onClick={chackehandler}
                 className=" w-3"
-                ch
+                
                 type="checkbox"
               />
               <span className="ml-2">
@@ -100,8 +118,9 @@ const SignUp = () => {
 
             <div className=" md:flex justify-center mt-10 space-y-4 md:space-x-4 md:items-center">
               <button
+              disabled={!checkbox}
                 type="submit"
-                className="bg-[rgb(99,214,196)] md:text-xl font-semibold px-4  md:px-6 py-1 md:py-3 rounded-full "
+                className={!checkbox ? "bg-[rgb(99,214,196)]/80 md:text-xl font-semibold px-4  md:px-6 py-1 md:py-3 rounded-full " : "bg-[rgb(99,214,196)] md:text-xl font-semibold px-4  md:px-6 py-1 md:py-3 rounded-full "}
               >
                 Sign Up
               </button>
