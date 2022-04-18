@@ -11,8 +11,8 @@ const Home = () => {
             <div className="w-3/4 h-full   mx-auto md:pt-20 ">
            <div className="lg:flex    justify-between items-center ">
           <div className="lg:space-y-4 md:space-y-2  w-full h-full text-center lg:text-left  ">
-          <h1 className="lg:text-5xl font-bold md:text-3xl  text-2xl ">MD READUL ISLAM <p className="  text-[rgb(99,214,196)]  '">
-           <Typed strings={['READUL', 'JUBAYER']} typeSpeed={120} backSpeed={140} loop></Typed>
+          <h1 className="lg:text-5xl font-bold md:text-3xl  text-2xl ">WILDLIFE PHOTOGRAPHER  <p className="  text-[rgb(99,214,196)]  '">
+           <Typed strings={['OF THE YEAR', 'Grand title winners']} typeSpeed={120} backSpeed={140} loop></Typed>
                </p></h1>
                <p className="lg:text-xl text-[14px] md:text-base text-gray-400 pb-2 ">These pictures can be either stored as a soft copy or they can 
              

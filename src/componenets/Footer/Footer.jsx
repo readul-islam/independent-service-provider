@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 
 const Footer = () => {
+  const onDate = new Date();
+  const d = onDate.getFullYear();
+  console.log(d) 
+  const [date , setDate] = useState(0)
+  useEffect(() =>{
+    setDate(d)
+
+  },[])
+
+  
+  
   return (
     <div className="w-screen  bg-[rgb(41,55,75)] pb-20 text-white flex-wrap pt-20">
-      <div className="md:flex items-center justify-center pb-12">
+      <div className=" w-5/6 mx-auto md:flex items-center justify-center pb-12">
         <div className="massage lg:px-16 px-6 md:w-2/4">
-          <h1 className="text-3xl font-bold md:text-4xl pb-6 text-center">
+          <h1 className="text-2xl font-bold md:text-3xl pb-6 text-center">
             Write me a line
           </h1>
           <div className="space-y-2">
@@ -24,7 +36,7 @@ const Footer = () => {
         </div>
 
         <div className="md:w-2/4 lg:space-y-9 lg:px-16 px-6  mt-12">
-          <p className=" text-3xl md:text-4xl mb-6 font-bold text-center">
+          <p className=" text-2xl md:text-3xl mb-6 font-bold text-center">
             Contact With Me
           </p>
           <p className="leading-7">
@@ -46,7 +58,7 @@ const Footer = () => {
           <div>
             <p className="">Wedding Photographer</p>
 
-            <p className=" w-full text-center">Copyright &copy; 2022</p>
+            <p className=" w-full text-center">Copyright &copy; {date} </p>
           </div>
         </div>
         <div className="flex justify-center lg:gap-22 md:gap-6 py-2 gap-6">

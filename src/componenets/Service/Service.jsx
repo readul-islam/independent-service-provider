@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Service = ({ service, serviceHandler }) => {
   return (
-    <div className="border-4 p-4  bg-black text-white rounded border-dotted  border-[rgb(99,214,196)] shadow-2xl flex flex-col items-center justify-center">
+    <div className="border-4 p-4  bg-black text-white rounded border-dotted  border-[rgb(99,214,196)] shadow-2xl flex flex-col hover:scale-105 duration-500 items-center justify-center">
       <div className="w-full">
         <img className="rounded w-full" src={service.img} alt="" />
       </div>
