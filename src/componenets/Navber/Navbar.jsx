@@ -17,8 +17,8 @@ const Navbar = () => {
               <ul className='hidden md:flex items-center text-xl uppercase'>
               <Link to='/home' className='px-4 '>Home</Link>
                    <li className='px-4'>Blogs</li>
-                   <li className='px-4 '>About</li>
                    <li className='px-4'>Contect</li>
+                   <li className='px-4 '>About</li>
                    <div>
                    { user ?   <Link to='/login' onClick={()=> signOut(auth)}   className='px-4 font-semibold py-2  rounded-full bg-[rgb(99,214,196)]/70 shadow-2xl uppercase'>Sign Out</Link> :  <Link to='/sign-up' className='px-4 font-semibold py-2 rounded-full bg-[rgb(99,214,196)]/90 uppercase shadow-2xl '>Sign Up</Link>}
                    </div>

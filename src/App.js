@@ -28,10 +28,10 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/login' element={<LogIn />} />
-        <Route path='/service' element={<RequireAuth>
-          <Services />
+        
+        <Route path='/checkout' element={ <RequireAuth>
+          <CheckOut />
         </RequireAuth>} />
-        <Route path='/checkout' element={ <CheckOut />} />
         <Route path='*' element={<NotFound />} />
 
 

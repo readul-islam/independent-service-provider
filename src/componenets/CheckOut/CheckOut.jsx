@@ -18,7 +18,7 @@ const CheckOut = () => {
 
 
   return (
-    <div  className="pt-20 bg-[rgb(41,55,75)] w-full h-screen text-white ">
+    <div  className="pt-20 bg-[rgb(41,55,75)] w-full  text-white ">
       <button className="flex items-center px-4 md:px-8 lg:px-16 fixed"onClick={() => navigate(-1)}><FaArrowLeft/><span>back</span></button>
       <p className="text-center py-8 md:text-2xl text-xl font-semibold">CheckOut Details</p>
 
