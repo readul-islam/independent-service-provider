@@ -1,7 +1,13 @@
-# Getting Started with Create React App
+# Wild Photographer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Website  [Live Link](https://assignment10-project-auth.web.app/).
 
-## Available Scripts
+## This my wild photographer website . i used react, react router , tailwind and
+- firebase authentication 
+- toast
+- tailwind
+- react router
+- react router
+- react-typed for typing look
+- react-firebase-hooks
 
-I
