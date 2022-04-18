@@ -17,7 +17,7 @@ const Footer = () => {
             <input type="text" placeholder="enter your massage" />
           </div>
           <div className="md:mt-6 mt-4">
-            <button className="bg-[rgb(137,96,125)]/70 hover:bg-[rgb(137,96,125)] mb-4  md:text-xl font-semibold  lg:px-10 lg:py-4 md:px-6 md:py-2 px-3 py-1 md:mb-8 rounded-full uppercase ">
+            <button className="bg-[rgb(99,214,196)]/70 hover:bg-[rgb(99,214,196)] mb-4  md:text-xl font-semibold  lg:px-10 lg:py-3 md:px-6 md:py-2 px-3 py-1 md:mb-8 rounded-full uppercase ">
               Submit
             </button>
           </div>
@@ -44,7 +44,7 @@ const Footer = () => {
       <div className="">
         <div className="flex justify-center w-full px-1 text-sm md:text-2xl md:py-3 py-2">
           <div>
-            <p className="">Sports phopographer since 2015 to 2022</p>
+            <p className="">Wedding Photographer</p>
 
             <p className=" w-full text-center">Copyright &copy; 2022</p>
           </div>

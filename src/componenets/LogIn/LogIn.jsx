@@ -28,6 +28,10 @@ const LogIn = () => {
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
+  if(loading){
+
+    return <p className="pt-28 flex  justify-center text-white text-2xl">Loading...</p>
+  }
 
   if (user) {
     navigate(from, { replace: true });
@@ -40,12 +44,12 @@ const LogIn = () => {
   };
 
   return (
-    <div className="w-screen text-white pt-32">
+    <div className="w-screen text-white pt-28 pb-10 bg-black">
       <div className=" md:w-[600px] w-[90%] bg-[rgb(41,55,75)] mx-auto rounded-2xl shadow-2xl shadow-[rgb(41,55,75)]/75">
         <div className="w-full lg:px-20 p-4 ">
           <div className="text-center text-2xl pt-4 font-semibold">SIGN IN</div>
           <form onSubmit={userSignIn} className="w-full pt-8">
-            <div className="mb-10">
+            <div className="mb-6">
               <label>E-MAIL</label>
               <input
                 onChange={getEmail}
@@ -55,7 +59,7 @@ const LogIn = () => {
               <p className="text-red-500 mt-1">{errors?.emailErrors}</p>
             </div>
 
-            <div className="mb-10">
+            <div className="mb-6">
               <label>PASSWORD</label>
               <input
                 onChange={getPassword}

@@ -7,7 +7,7 @@ import Services from '../Service/Services';
 const Home = () => {
     return (
         <>
-        <div className="w-screen lg:h-screen overflow-x-hidden  pt-20 text-white bg-[rgb(41,55,75)] ">
+        <div className="w-screen  h-screen  pt-20 text-white bg-[rgb(41,55,75)] ">
             <div className="w-3/4 h-full   mx-auto md:pt-20 ">
            <div className="lg:flex    justify-between items-center ">
           <div className="lg:space-y-4 md:space-y-2  w-full h-full text-center lg:text-left  ">
@@ -33,8 +33,9 @@ const Home = () => {
 
             </div>
             
-       <Services/>
+       
         </div>
+        <Services/>
         </>
     );
 };

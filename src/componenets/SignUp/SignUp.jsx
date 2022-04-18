@@ -34,6 +34,9 @@ const SignUp = () => {
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+    if(loading) {
+      return <p>Loading...</p>
+    }
  if(user){
 
   navigate('/home')
